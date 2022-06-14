@@ -8,7 +8,7 @@ pipeline {
                    checkout scm
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh "mvn verify"
             }
