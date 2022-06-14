@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Hello_Pipeline') {
+        stage('Checkout') {
             steps {
-                sh "echo Hello Pipeline!"
+//                 sh "echo Hello Pipeline!"
+                   deleteDir()
+                   checkout scm
+            }
+        }
+        stage('test') {
+            steps {
+                sh "mvn verify"
             }
         }
     }
