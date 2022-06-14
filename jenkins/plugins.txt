@@ -1,0 +1,4 @@
+git
+locale
+kubernetes-cli
+workflow-aggregator
